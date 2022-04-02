@@ -1,3 +1,3 @@
 #!/bin/bash
 
-suck my dick
+echo "suck my dick"
