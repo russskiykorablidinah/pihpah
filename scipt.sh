@@ -2,7 +2,7 @@
 
 echo "suck my dick "
 
-echo " hey "
+echo " hey ms"
 
 
 echo "hello sir"
