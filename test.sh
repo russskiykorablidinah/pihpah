@@ -1,11 +1,11 @@
 #!/bin/bash
 
 
-CHECK_VAR=`vnstat -y | awk /2022/'{print $9}'`
+CHECK_MB_OR_GB=`vnstat -y | awk /2022/'{print $9}'`
 TRAFFIC=`vnstat -y | awk /2022/'{print $8}'`
+MAX_TARGET=3
 
 
-
-if (( "$CHECK_VAR" == "GiB" && (( $TRAFFIC >= 2.50 )); then
+if (( $(bc -l<<<"$TRAFFIC >= $MAX_TARGET") )) && [ "$CHECK_MB_OR_GB" == "GiB" ]; then
         sudo shutdown
 fi
